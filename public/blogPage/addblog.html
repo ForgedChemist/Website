@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bora's Blog</title>
+    <link rel="stylesheet" href="../cssFiles/navBar.css">
+    <link rel="stylesheet" href="../cssFiles/blogPages.css">
+        <!-- update the version number as needed -->
+        <script defer src="/__/firebase/10.12.1/firebase-app-compat.js"></script>
+        <!-- include only the Firebase features as you need -->
+        <script defer src="/__/firebase/10.12.1/firebase-auth-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-database-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-firestore-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-functions-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-messaging-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-storage-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-analytics-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-remote-config-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-performance-compat.js"></script>
+        <!-- 
+          initialize the SDK after all desired features are loaded, set useEmulator to false
+          to avoid connecting the SDK to running emulators.
+        -->
+        <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+</head>
+<header>
+  <a href="../frontPage.html" id="logo"><img src="/Images/logo.png" alt="Bora's Blog"></a>
+  <div class="hamburger"><img src="/Images/interface.png" style="height: 30px; width: 30px;" alt=""></div>
+  <nav>
+      <ul>
+          <li><a href="/frontPage.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/blogPage.html">Blog</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <div class="dropdown">
+              <a href="#" class="user"><img src="/Images/user.png"></a>
+              <div class="dropdown-content">
+                <a onclick="googleLogin()" style="cursor:pointer">Google login</a>
+              </div>
+          </div>
+          
+      </ul>
+  </nav>
+</header>
+
+<body>
+
+    <h1>Update Blog Post</h1>
+    <form id="update-post-form" onsubmit="updatePost(event, docId)">
+        <label for="docId">Blog ID:</label><br>
+        <input type="text" id="docId" name="docId"><br>
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content"></textarea><br>
+        <input type="submit" value="Update Post">
+    </form>
+
+    <h1>Add New Blog Post</h1>
+    <form id="new-post-form" onsubmit="addPost(event)">
+        <label for="title">Title:</label><br>
+        <input onchange="addTitle" id="title" name="title"><br>
+        <label for="content">Content:</label><br>
+        <input onchange="addContent" id="content" name="content"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <br>
+    <button onclick="displayPosts()">Display Posts</button>
+    <div id="posts-container"></div>
+    <script src="/JS/addPost.js"></script>
+</body>
+
+<footer>
+  <p>&copy; 2024 Bora's Blog. All rights reserved.</p>
+  <ul>
+      <li><a href="../frontPage.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../blogPage.html">Blog</a></li>
+      <li><a href="../projects.html">Projects</a></li>
+      <li><a href="../login.html"> Login</a></li>
+      <li><a href="../register.html"> Register</a></li>
+  </ul>
+</footer>
+<script>
+ 
+  document.querySelector('.hamburger').addEventListener('click', function() {
+      this.classList.toggle('clicked');
+  });
+</script>
+<script src="/firebaseInit.js"></script>
+<script src="/JS/app.js"></script>
+<script src="/JS/addPost.js"></script>
+</html>

@@ -1,0 +1,51 @@
+
+/* Style the image */
+#foto {
+    width: 300px; /* Adjust this value to change the image size */
+    float: right; /* Position the image to the right */
+    padding: 50px;
+}
+
+body h1 {
+    text-align: center; /* Center the heading */
+    color: hsl(203, 14%, 22%);
+}
+
+body article {
+    padding: 50px;
+    width: 50%; /* Adjust this value to change the text width */
+    float: left; /* Position the text to the left */
+    text-align: justify; /* Justify the text */
+    font-size: 18px; /* Adjust this value to change the font size */
+    border: 1px solid black; /* Add a border to create a box */
+    padding: 100px; /* Add padding to create space inside the box */
+    background-color: #f2f2f2; /* Add a background color to the box */
+}
+
+#aboutbutton{
+    position: fixed;
+    float: left;
+    width: 60px;
+    height: 50px;
+    border: 0;
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 768px) {
+    #foto {
+        width: 100%; /* Adjust this value to change the image size */
+        float: none; /* Position the image to the right */
+        padding: 0px;
+    }
+
+    body article {
+        padding: 0px;
+        width: 100%; /* Adjust this value to change the text width */
+        float: none; /* Position the text to the left */
+        text-align: justify; /* Justify the text */
+        font-size: 18px; /* Adjust this value to change the font size */
+        border: 0px; /* Add a border to create a box */
+        padding: 0px; /* Add padding to create space inside the box */
+        background-color: #f2f2f2; /* Add a background color to the box */
+    }
+}

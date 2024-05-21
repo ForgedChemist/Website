@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bora's Blog</title>
+    <link rel="stylesheet" href="cssFiles/navBar.css">
+    <link rel="stylesheet" href="cssFiles/about.css">
+        <!-- update the version number as needed -->
+        <script defer src="/__/firebase/10.12.1/firebase-app-compat.js"></script>
+        <!-- include only the Firebase features as you need -->
+        <script defer src="/__/firebase/10.12.1/firebase-auth-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-database-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-firestore-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-functions-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-messaging-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-storage-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-analytics-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-remote-config-compat.js"></script>
+        <script defer src="/__/firebase/10.12.1/firebase-performance-compat.js"></script>
+        <!-- 
+          initialize the SDK after all desired features are loaded, set useEmulator to false
+          to avoid connecting the SDK to running emulators.
+        -->
+        <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+</head>
+<header>
+    <a href="frontPage.html" id="logo"><img src="/Images/logo.png" alt="Bora's Blog"></a>
+    <div class="hamburger"><img src="Images/interface.png" style="height: 30px; width: 30px;" alt=""></div>
+    <nav>
+        <ul>
+            <li><a href="frontPage.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blogPage.html">Blog</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <div class="dropdown">
+                <a href="#" class="user"><img src="Images/user.png"></a>
+                <div class="dropdown-content">
+                    
+                    <a onclick="googleLogin()" style="cursor:pointer">Google login</a>
+                </div>
+            </div>
+            
+        </ul>
+    </nav>
+</header>
+<body>
+    <h1>About Me</h1>
+    <article>
+    <p>Welcome to my blog! My name is Bora and I'm a passionate writer and developer. I created this blog to share my thoughts, experiences, and projects with you.</p>
+    <p>Feel free to explore the different sections of my blog and don't hesitate to reach out if you have any questions or feedback.</p>
+    <p>Thanks for visiting!</p>
+    <h4>Bora Toprak Yaşar</h4>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <button id="aboutbutton"><a href="https://www.linkedin.com/in/boratoprakyasar/"><img src="Images/LinkedIn.png" style="width: 100%; height: 100%;" alt="LinkedIn"></a></button>
+    </article>
+
+
+    <img src="Images/foto.jpg" id="foto" alt="Bora">
+
+
+
+</body>
+
+<footer>
+    <p>&copy; 2024 Bora's Blog. All rights reserved.</p>
+    <ul>
+        <li><a href="frontPage.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blogPage.html">Blog</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+</footer>
+<script>
+ 
+    document.querySelector('.hamburger').addEventListener('click', function() {
+        this.classList.toggle('clicked');
+    });
+</script>
+<script src="firebaseInit.js"></script>
+<script src="JS/app.js"></script>
+</html>
