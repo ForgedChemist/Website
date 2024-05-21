@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bora's Blog</title>
+    <link rel="stylesheet" href="cssFiles/navBar.css">
+    <link rel="stylesheet" href="cssFiles/loginregister.css">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/10.12.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/10.12.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.12.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/10.12.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/10.12.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/10.12.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/10.12.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/10.12.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/10.12.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/10.12.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  </head>
+  <header>
+    <a href="frontPage.html" id="logo"><img src="/Images/logo.png" alt="Bora's Blog"></a>
+    <div class="hamburger"><img src="Images/interface.png" style="height: 30px; width: 30px;" alt=""></div>
+    <nav>
+        <ul>
+            <li><a href="frontPage.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blogPage.html">Blog</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <div class="dropdown">
+                <a href="#" class="user"><img src="Images/user.png"></a>
+                <div class="dropdown-content">
+                    
+                    <a onclick="googleLogin()" style="cursor:pointer">Google login</a>
+                </div>
+            </div>
+            
+        </ul>
+    </nav>
+</header>
+  <body>
+    <button type="button" onclick="googleLogin()" style="text-align: center; justify-content: center;">Google Login</button>
+    <script src="JS/app.js"></script>
+  </body>
+  <footer>
+    <p>&copy; 2024 Bora's Blog. All rights reserved.</p>
+    <ul>
+        <li><a href="frontPage.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blogPage.html">Blog</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+</footer>
+</html>

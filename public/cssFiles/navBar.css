@@ -1,0 +1,202 @@
+body{
+    overflow-x: hidden;
+}
+
+
+/* Style the header */
+header {
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    position:sticky;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    overflow: visible;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    
+    
+    
+}
+
+/* Style the logo */
+#logo img {
+    height: 80px;
+    margin-left: auto;
+
+}
+
+.user img {
+    height: 35px;
+    margin-top: 10px;
+    margin-right: 40px;
+    margin-left: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    z-index: 10000;
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10000;
+    right: 1px;
+    
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #fff;
+    color: #79919d;
+    text-align: center;
+    z-index: 10000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    padding: 10px;
+    color: white;
+    z-index: 10000;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+/* Style the navigation bar */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    font-size: 20px;
+    min-width: 160px;
+    font-weight: bold;
+
+}
+
+/* Style the navigation links */
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color:  #79919d;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the color of links on hover */
+nav ul li a:hover {
+    text-decoration: underline;
+    color: hsl(203, 14%, 22%);
+    text-shadow: 1px 1px 1px hsl(203, 14%, 22%);
+
+}
+
+/* footer */
+footer {
+    background-color: hsl(203, 14%, 22%);
+    color: white;
+    text-align: center;
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    width: 100%;
+    content: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+footer ul li a {
+    text-decoration: none;
+    padding: 50px;
+    color: white;
+}
+
+/* Hide the navigation menu items by default */
+
+/* Style the hamburger icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* Show the hamburger icon on small screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        margin-left: auto;
+    }
+    nav ul {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    footer ul {
+        flex-direction: flex;
+        align-items: center;
+        position: absolute;
+    }
+
+    footer ul li a {
+        padding: 20px;
+    }
+
+    footer {
+        max-width: 768px;
+        max-height: 200px;
+        
+
+    }
+    footer p {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        max-width: 100%;
+    }
+}
+
+/* Show the navigation menu in a vertical layout when hamburger is clicked */
+.hamburger.clicked ~ nav ul {
+    display: block;
+    flex-direction: column;
+}
