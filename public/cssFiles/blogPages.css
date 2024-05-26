@@ -6,6 +6,14 @@
     font-family: Arial;
     padding: 20px;
     background: #fff;
+    background-image: url(/Images/peakpx.jpg) !important;
+    background-size: cover !important;
+  }
+
+  @media (max-width: 768px) {
+    body {
+        background-image: none !important;
+    }
   }
   
   /* Header/Blog Title */
