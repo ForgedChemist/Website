@@ -1,7 +1,16 @@
 body{
     overflow-x: hidden;
+    background-image: url("/Images/peakpx.jpg");
+    background-size: cover;
 }
 
+@media (max-width: 768px) {
+    body {
+        background-image: none;
+    
+    }
+    
+}
 
 /* Style the header */
 header {
