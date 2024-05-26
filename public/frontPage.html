@@ -6,6 +6,8 @@
     <title>Bora's Blog</title>
     <link rel="stylesheet" href="cssFiles/navBar.css">
     <link rel="stylesheet" href="cssFiles/frontPage.css">
+
+    
         <!-- update the version number as needed -->
         <script defer src="/__/firebase/10.12.1/firebase-app-compat.js"></script>
         <!-- include only the Firebase features as you need -->
@@ -18,6 +20,7 @@
         <script defer src="/__/firebase/10.12.1/firebase-analytics-compat.js"></script>
         <script defer src="/__/firebase/10.12.1/firebase-remote-config-compat.js"></script>
         <script defer src="/__/firebase/10.12.1/firebase-performance-compat.js"></script>
+      </body>
         <!-- 
           initialize the SDK after all desired features are loaded, set useEmulator to false
           to avoid connecting the SDK to running emulators.
@@ -50,8 +53,8 @@
     <div class="entry">
     <h1>Welcome To Bora's Blog</h1>
     <p>If you want to subscribe, Fill the box below.</p>
-    <form method="post">
-        <input type="email" placeholder="Enter your email Here!" name="email"><br>
+    <form onsubmit="subscribe()" >
+        <input  type="email" placeholder="Enter your email Here!" name="email" id="fpEmail"><br>
         <button type="submit">Subscribe</button>
     </form>
     </div>
@@ -79,16 +82,16 @@
     <h2>Projects</h2>
     <div class="project-grid">
         <div class="project-column">
-            <p>Project1. Lorem ipsum dolor sit amet consectetur, adipisicing elit. De...</p>
-            <button><a href="projects/project1.html">Read More</a></button>
+            <p>CSS. 3D Cube and Ball bounce effect only with CSS, learned from Amit Sheen...</p>
+            <button><a href="https://github.com/ForgedChemist/3DCubeNBallBounceCSS">Read More</a></button>
         </div>
         <div class="project-column">
-            <p>Project2. Lorem ipsum dolor sit amet consectetur, adipisicing elit. De...</p>
-            <button><a href="projects/project2.html">Read More</a></button>
+            <p>mathematical-cryption. Checks if UPC and ISBN-10 cryptions are correct...</p>
+            <button><a href="https://github.com/ForgedChemist/mathematical-cryption">Read More</a></button>
         </div>
         <div class="project-column">
-            <p>Project3. Lorem ipsum dolor sit amet consectetur, adipisicing elit. De...</p>
-            <button><a href="projects/project3.html">Read More</a></button>
+            <p>Github. This Column takes you to This website's owners github website...</p>
+            <button><a href="https://github.com/ForgedChemist">Read More</a></button>
         </div>
     </div>
     </div>
@@ -111,6 +114,7 @@
         this.classList.toggle('clicked');
     });
 </script>
-<script type="module" src="firebaseInit.js"></script>
+<script src="firebaseInit.js"></script>
 <script src="JS/app.js"></script>
+<script src="JS/subscribe.js"></script>
 </html>
