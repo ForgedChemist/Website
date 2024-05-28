@@ -165,7 +165,7 @@ footer ul li a {
 @media (max-width: 768px) {
     .hamburger {
         display: block;
-        margin-left: auto;
+        margin-left: 230px;
     }
     nav ul {
         display: none;
@@ -205,7 +205,15 @@ footer ul li a {
 }
 
 /* Show the navigation menu in a vertical layout when hamburger is clicked */
-.hamburger.clicked ~ nav ul {
-    display: block;
-    flex-direction: column;
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    .hamburger.clicked ~ nav ul {
+        display: block;
+        flex-direction: column;
+    }
+    
 }
