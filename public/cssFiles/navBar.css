@@ -214,6 +214,13 @@ footer ul li a {
     .hamburger.clicked ~ nav ul {
         display: block;
         flex-direction: column;
+        align-items: center;
+        position: absolute; /* Make the menu float over the content */
+        z-index: 10001; /* Set a higher z-index value */
+        background-color: white; /* Add a background color to make the menu visible over the content */
+        width: fit-content;
+        margin-top: 20px;
+        margin-right: 20px;
     }
     
 }
