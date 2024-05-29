@@ -11,7 +11,8 @@
 
 
     })
-});*/
+});
+*/
 
 
 function updatePost(e, docId) {

@@ -1,20 +1,76 @@
 body {
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-#contactform input[type="text"],
-#contactform textarea {
-    text-align: start;
-    padding: 12px 20px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
     background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+h1 {
+    text-align: center;
+    color: hsl(203, 14%, 22%); /* main color */
+}
 
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #79919d; /* main color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: hsl(203, 14%, 22%);
+}
 
 @media (max-width: 768px) {
-    #contactform input[type="text"], #contactform textarea{
-        max-width: max-content;
+    .container {
+        margin: 20px;
     }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 8px;
+    }
+
+    
 }

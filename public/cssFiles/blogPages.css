@@ -8,6 +8,7 @@
     background: #fff;
     background-image: url(/Images/peakpx.jpg) !important;
     background-size: cover !important;
+    
   }
 
   @media (max-width: 768px) {
@@ -46,15 +47,46 @@
     background-color: #f2f2f2;
     padding: 20px;
     margin-top: 20px;
-    border: 1px solid black;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  .card li{
-    color: black;
-    text-decoration: none;
-    list-style-type:square;
+  .contact-info, .contact-me{
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 20px;
   }
+
+  .card{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px; /* Add some space between the navigation and other content */
+  }
+  .card li{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc; /* Add borders between list items */
+    position: relative; /* Position relative for arrow pseudo-element */
+  }
+
+  .card ul li:last-child {
+    border-bottom: none; /* Remove border from the last list item */
+}
   
+.card ul li::before {
+  content: "\2022"; /* Unicode for bullet point */
+  color: #79919d; /* main color */
+  font-size: 12px;
+  position: absolute;
+  left: -20px; /* Adjust the position of the bullet point */
+}
+
+.card ul li a {
+  text-decoration: none;
+  color: #333; /* Adjust the color of the navigation links as needed */
+  font-weight: bold;
+  padding-left: 20px; /* Add padding to align text after the bullet point */
+}
   /* Clear floats after the columns */
   .row:after {
     content: "";

@@ -17,9 +17,11 @@ body article {
     float: left; /* Position the text to the left */
     text-align: justify; /* Justify the text */
     font-size: 18px; /* Adjust this value to change the font size */
-    border: 1px solid black; /* Add a border to create a box */
     padding: 100px; /* Add padding to create space inside the box */
     background-color: #f2f2f2; /* Add a background color to the box */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 #aboutbutton{
@@ -36,6 +38,7 @@ body article {
         width: 100%; /* Adjust this value to change the image size */
         float: none; /* Position the image to the right */
         padding: 0px;
+        padding-top: 20px;
     }
 
     body article {

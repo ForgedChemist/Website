@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="cssFiles/navBar.css">
     <link rel="stylesheet" href="cssFiles/frontPage.css">
 
-    
         <!-- update the version number as needed -->
         <script defer src="/__/firebase/10.12.1/firebase-app-compat.js"></script>
         <!-- include only the Firebase features as you need -->
@@ -20,7 +19,6 @@
         <script defer src="/__/firebase/10.12.1/firebase-analytics-compat.js"></script>
         <script defer src="/__/firebase/10.12.1/firebase-remote-config-compat.js"></script>
         <script defer src="/__/firebase/10.12.1/firebase-performance-compat.js"></script>
-      </body>
         <!-- 
           initialize the SDK after all desired features are loaded, set useEmulator to false
           to avoid connecting the SDK to running emulators.
@@ -28,7 +26,7 @@
         <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 </head>
 <header>
-    <a href="frontPage.html" id="logo"><img src="/Images/logo.png" alt="Bora's Blog"></a>
+    <a href="frontPage.html" id="logo"><img src="Images/logo.png" alt="Bora's Blog"></a>
     <div class="hamburger"><img src="Images/interface.png" style="height: 30px; width: 30px;" alt=""></div>
     <nav>
         <ul>
@@ -51,49 +49,125 @@
 
 <body>
     <div class="entry">
-    <h1>Welcome To Bora's Blog</h1>
-    <p>If you want to subscribe, Fill the box below.</p>
-    <form onsubmit="subscribe()" >
-        <input  type="email" placeholder="Enter your email Here!" name="email" id="fpEmail"><br>
-        <button type="submit">Subscribe</button>
-    </form>
+        <h1>Welcome To Bora's Blog</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
     </div>
 
-    <div class="content">
-    <div class="blog">
-    <h2>Recent Blogs</h2>
-    <div class="blog-grid">
-        <div class="blog-column">
-            <p>Blog1. Lorem ipsum dolor sit amet consectetur, adipisicing elit. De...</p>
-            <button><a href="blogPage/blog1.html">Read More</a></button>
+    <div class="imagebar">
+        <img src="Images/backgroundImagetest.jpg" alt="Background Image">
+        <div class="overlay">
+            <h1>Want to Login?</h1>
+            <button class="info-button" onclick="googleLogin()">Click Here!</button>
         </div>
-        <div class="blog-column">
-            <p>Blog2. Lorem ipsum dolor sit amet consectetur, adipisicing elit. De...</p>
-            <button><a href="blogPage/blog2.html">Read More</a></button>
-        </div>
-        <div class="blog-column">
-            <p>Blog3. Lorem ipsum dolor sit amet consectetur, adipisicing elit. De...</p>
-            <button><a href="blogPage/blog3.html">Read More</a></button>
-        </div>
-    </div>
     </div>
 
-    <div class="project">
-    <h2>Projects</h2>
-    <div class="project-grid">
-        <div class="project-column">
-            <p>CSS. 3D Cube and Ball bounce effect only with CSS, learned from Amit Sheen...</p>
-            <button><a href="https://github.com/ForgedChemist/3DCubeNBallBounceCSS">Read More</a></button>
-        </div>
-        <div class="project-column">
-            <p>mathematical-cryption. Checks if UPC and ISBN-10 cryptions are correct...</p>
-            <button><a href="https://github.com/ForgedChemist/mathematical-cryption">Read More</a></button>
-        </div>
-        <div class="project-column">
-            <p>Github. This Column takes you to This website's owners github website...</p>
-            <button><a href="https://github.com/ForgedChemist">Read More</a></button>
+    <div class="logosandtext">
+        <h2>My Socials</h2>
+        <div class="socials">
+            <a href="your_facebook_link"><img src="Images/githublogo.png" alt="Facebook"></a>
+            <a href="your_twitter_link"><img src="Images/xlogo.png" alt="Twitter"></a>
+            <a href="your_instagram_link"><img src="Images/Instagram.png" alt="Instagram"></a>
         </div>
     </div>
+
+    <div class="frontpageaboutme">
+        <div class="aboutme-text">
+            <h2>Short About Me</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eaque placeat et doloremque perspiciatis doloribus eius quasi debitis nostrum ea eum modi dolorum ipsam magni in vel fuga, beatae obcaecati? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem commodi nam debitis, totam natus rem architecto, distinctio temporibus vel dolor, qui explicabo. Adipisci in possimus eaque facere eveniet, odio necessitatibus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur aperiam ipsa ad veniam repudiandae est dolores sapiente, vero, aut perspiciatis consequuntur unde ipsum minima quasi quaerat omnis repellat atque dolorem.</p>
+            <button class="info-button">More Info</button>
+        </div>
+        <div class="aboutme-photo">
+            <img src="Images/foto.jpg" class="Your Photo" style="width: 20%; height: 120%;">
+        </div>
+    </div>
+
+    <div class="blog-posts-container">
+        <div class="blog-post">
+            <div class="blog-post-image">
+                <img src="Images/image.png" alt="Blog Post Image 1">
+                <div class="blog-post-title">
+                    Elementum Laoreet Lorem Donec
+                </div>
+            </div>
+            <div class="blog-post-content">
+                <p>Pede nam quis mauris nunc volutpat elementum sapien in hendrerit justo non nisl sed dictum libero et nisi.</p>
+                <a href="blogPage/blog1.html">Read More ></a>
+            </div>
+        </div>
+        <div class="blog-post">
+            <div class="blog-post-image">
+                <img src="Images/download2.jpeg" alt="Blog Post Image 2">
+                <div class="blog-post-title">
+                    Vestibulum Accumsan Sagittis
+                </div>
+            </div>
+            <div class="blog-post-content">
+                <p>Orci nulla purus pellentesque risus magna vulputate vitae sodales in aliquam at tortor praesent tincidunt.</p>
+                <a href="blogPage/blog2.html">Read More ></a>
+            </div>
+        </div>
+        <div class="blog-post">
+            <div class="blog-post-image">
+                <img src="Images/download.jpeg" alt="Blog Post Image 3">
+                <div class="blog-post-title">
+                    Lorem In Odio Pellentesque At
+                </div>
+            </div>
+            <div class="blog-post-content">
+                <p>Donec faucibus lorem ut neque pellentesque quam donec imperdiet nisl sed euismod ullamcorper tortor cras.</p>
+                <a href="blogPage/blog3.html">Read More ></a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="blog-posts-container">
+        <div class="blog-post">
+            <div class="blog-post-image">
+                <img src="Images/css.jpg" alt="Blog Post Image 1">
+                <div class="blog-post-title">
+                    3DCubeNBallBounceCSS
+                </div>
+            </div>
+            <div class="blog-post-content">
+                <p>CSS. 3D Cube and Ball bounce effect only with CSS, learned from Amit Sheen...</p>
+                <a href="https://github.com/ForgedChemist/3DCubeNBallBounceCSS">Read More ></a>
+            </div>
+        </div>
+        <div class="blog-post">
+            <div class="blog-post-image">
+                <img src="Images/cryption.webp" alt="Blog Post Image 2">
+                <div class="blog-post-title">
+                    cryption
+                </div>
+            </div>
+            <div class="blog-post-content">
+                <p>mathematical-cryption. Checks if UPC and ISBN-10 cryptions are correct...</p>
+                <a href="https://github.com/ForgedChemist/mathematical-cryption">Read More ></a>
+            </div>
+        </div>
+        <div class="blog-post">
+            <div class="blog-post-image">
+                <img src="Images/github.jpeg" alt="Blog Post Image 3">
+                <div class="blog-post-title">
+                    Github
+                </div>
+            </div>
+            <div class="blog-post-content">
+                <p>Github. This Column takes you to This website's owners github website...</p>
+                <a href="https://github.com/ForgedChemist">Read More ></a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="frontpagesubscribe">
+        <h2>Subscribe to our newsletter</h2>
+        <form onsubmit="subscribe()" >
+            <input  type="email" placeholder="Enter your email Here!" name="email" id="fpEmail"><br>
+            <button type="submit">Subscribe</button>
+        </form>
     </div>
 </body>
 <footer>
@@ -116,5 +190,4 @@
 </script>
 <script src="firebaseInit.js"></script>
 <script src="JS/app.js"></script>
-<script src="JS/subscribe.js"></script>
 </html>
